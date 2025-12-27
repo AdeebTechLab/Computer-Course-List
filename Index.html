@@ -2,314 +2,302 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-1024, user-scalable=1" />
-  <title>Courses | Computer Courses</title>
-   <link rel="stylesheet" href="/Index.css">
-   <link rel="stylesheet" href="/index/Footor.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salman Adeeb - Digital Card</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 50;
+      padding: 0;
+    }
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-<link
-     rel="stylesheet"
-     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-   />
+    .card {
+      max-width: 800px;
+      background: #fff;
+      margin: 40px auto;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    /* Header Section */
+    .header {
+      background: url("https://res.cloudinary.com/adeeb-tech-lab/image/upload/v1755458468/Artboard_10_splkq7.jpg") no-repeat center/cover;
+      height: 200px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .profile-pic {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      position: absolute;
+      bottom: -65px;
+      object-fit: cover;
+    }
+
+    /* Content */
+    .content {
+      padding: 90px 30px 30px;
+      text-align: center;
+    }
+
+    .content h2 {
+      margin: 0;
+      font-size: 26px;
+      font-weight: bold;
+    }
+
+    .content h4 {
+      margin: 5px 0;
+      font-size: 18px;
+      color: #555;
+    }
+
+    .content p {
+      margin: 10px 0;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    /* Skill Tags */
+    .skills {
+      margin: 15px 0;
+    }
+
+    .skills span {
+      display: inline-block;
+      background: #f3f4f6;
+      color: #333;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 14px;
+      margin: 5px 5px 0 0;
+    }
+
+    /* Buttons */
+    .buttons {
+      display: flex;
+      gap: 15px;
+      margin: 20px 0;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 22px;
+      border-radius: 25px;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 15px;
+      transition: 0.3s;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    }
+
+    .cv-btn {
+      background: #4f46e5;
+      color: #fff;
+      border: 2px solid #4f46e5;
+    }
+
+    .cv-btn:hover {
+      background: #3730a3;
+      border-color: #3730a3;
+    }
+
+    .whatsapp-btn {
+      background: #fff;
+      color: #4f46e5;
+      border: 2px solid #4f46e5;
+    }
+
+    .whatsapp-btn:hover {
+      background: #f3f3ff;
+    }
+
+    /* Contact Section */
+    .contact {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* 2 columns */
+      gap: 12px;
+      text-align: left;
+    }
+
+    .contact a {
+      display: flex;
+      align-items: center;
+      padding: 12px;
+      border-radius: 10px;
+      text-decoration: none;
+      background: #f8f9fa;
+      color: #333;
+      font-size: 15px;
+      transition: 0.3s;
+      justify-content: flex-start;
+    }
+
+    .contact a i {
+      margin-right: 10px;
+      font-size: 18px;
+      color: #4f46e5;
+    }
+
+    .contact a:hover {
+      background: #e5e7eb;
+    }
+
+    /* Footer */
+    .footer {
+      padding: 15px;
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+      background: #fafafa;
+      border-top: 1px solid #eee;
+    }
+
+    /* 📱 Mobile Responsive */
+    @media (max-width: 600px) {
+      .header {
+        height: 150px;
+      }
+
+      .profile-pic {
+        width: 120px;
+        height: 120px;
+        bottom: -50px;
+      }
+
+      .content {
+        padding: 70px 20px 20px;
+      }
+
+      .content h2 {
+        font-size: 22px;
+      }
+
+      .content h4 {
+        font-size: 16px;
+      }
+
+      .skills span {
+        font-size: 12px;
+        padding: 5px 10px;
+      }
+
+      .buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+  width: 80%;
+  margin: 0px auto;  /* Center alignment */
+  display: block;     /* Ensure it takes full width for centering */
+}
+
+      .contact {
+        grid-template-columns: 1fr; /* mobile pe 1 column */
+      }
+
+      .contact a {
+        font-size: 14px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<section class="courses-section">
-  <h1 class="section-title">Computer Courses Details</h1>
-<div class="filter-buttons">
-  <button onclick="filterCourses('Islamabad')" style="background-color: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin: 5px;">Islamabad Courses</button>
-  <button onclick="filterCourses('Bahawalpur')" style="background-color: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin: 5px;">Bahawalpur Courses</button>
-</div>
-<hr>
-
-    <div class="courses-container">
-
-      <!-- Course Card 1 -->
-      <div class="course-card" onclick="window.open('https://www.google.com', '_blank')" data-location="Bahawalpur">
-        <img src="/assets/course-img/texation.jpg" alt="Course Image">
-        <div class="course-info">
-          <div class="instructor">
-            <p>Sir Ahmad Tariq</p>
-            <span class="tag taxation">Taxation</span>
-          </div>
-          <h3>Taxation</h3>
-          <p>Taxation is a comprehensive course designed to equip you with essential...</p>
-          <div class="price-rating taxation"><span class="price">RS:30,000</span><span class="old-price">RS:35,000</span><div class="stars">⭐⭐⭐⭐ 4.5</div></div>
-        </div>
-      </div>
-
-      <!-- Course Card 2 -->
-      <div class="course-card" onclick="window.open('https://www.google.com', '_blank')" data-location="Islamabad, Bahawalpur">
-        <img src="/assets/course-img/freelancing.jpg" alt="Course Image">
-        <div class="course-info">
-          <div class="instructor">
-            <p>Sir Hasham</p>
-            <span class="tag freelancing">Freelancing</span>
-          </div>
-          <h3>Freelancing</h3>
-          <p>Freelancing allows individuals to work independently, offering...</p>
-          <div class="price-rating freelancing"><span class="price">RS:9,000</span><span class="old-price">RS:13,000</span><div class="stars">⭐⭐⭐⭐ 4.4</div></div>
-        </div>
-      </div>
-
-      <!-- Course Card 3 -->
-      <div class="course-card" onclick="window.open('https://www.google.com', '_blank')" data-location="Bahawalpur">
-        <img src="/assets/course-img/video edit.jpg" alt="Course Image">
-        <div class="course-info">
-          <div class="instructor">
-            <p>Sir Wqas</p>
-            <span class="tag video-editing">Video Editing</span>
-          </div>
-          <h3>Video Editing</h3>
-          <p>Video editing skills allow you to craft engaging stories through visuals, sound, and motion...</p>
-          <div class="price-rating web-app-sw-development"><span class="price">RS:8,000</span><span class="old-price">RS:10,000</span><div class="stars">⭐⭐⭐⭐⭐ 4.9</div></div>
-        </div>
-      </div>
-
-      <!-- Course Card 4 -->
-      <div class="course-card" onclick="window.open('https://www.google.com', '_blank')" data-location="Islamabad, Bahawalpur">
-        <img src="/assets/course-img/e-commerx.jpg" alt="Course Image">
-        <div class="course-info">
-          <div class="instructor">
-            <p>Sir Hasham</p>
-            <span class="tag e-commerce">E-Commerce</span>
-          </div>
-          <h3>E-Commerce</h3>
-          <p>E-Commerce is a comprehensive course designed to equip you with essential...</p>
-          <div class="price-rating e-commerce"><span class="price">RS:10,000</span><span class="old-price">RS:15,000</span><div class="stars">⭐⭐⭐⭐ 4.9</div></div>
-        </div>
-      </div>
-
-      <!-- Course Card 5 -->
-      <div class="course-card" onclick="window.open('https://www.google.com', '_blank')" data-location="Bahawalpur">
-        <img src="/assets/course-img/program.jpg" alt="Course Image">
-        <div class="course-info">
-          <div class="instructor">
-            <p>Sir Wqas, Hasham</p>
-            <span class="tag programming">Programming</span>
-          </div>
-          <h3>Programming</h3>
-          <p>Programming is a comprehensive course designed to equip you with essential...</p>
-          <div class="price-rating programming"><span class="price">RS:8,000</span><span class="old-price">RS:10,000</span><div class="stars">⭐⭐⭐⭐⭐ 4.9</div></div>
-        </div>
-      </div>
-
-      <!-- Course Card 6 -->
-      <div class="course-card" onclick="window.open('https://www.google.com', '_blank')" data-location="Islamabad, Bahawalpur">
-        <img src="/assets/course-img/896c75f3-72bc-44d7-a96b-faffe0cc5242.jpg" alt="Course Image">
-        <div class="course-info">
-          <div class="instructor">
-            <p>Sir Hasham</p>
-            <span class="tag office-work">Office Work</span>
-          </div>
-          <h3>Office Work[IT]</h3>
-          <p>Office Work is a comprehensive course designed to equip you with essential..</p>
-          <div class="price-rating office-work"><span class="price">RS:7,000</span><span class="old-price">RS:10,000</span><div class="stars">⭐⭐⭐⭐ 4.5</div></div>
-        </div>
-      </div>
-
-      <!-- Course Card 7 -->
-      <div class="course-card" onclick="window.open('https://www.google.com', '_blank')" data-location="Bahawalpur">
-        <img src="/assets/course-img/cyber.jpg" alt="Course Image">
-        <div class="course-info">
-          <div class="instructor">
-            <p>Sir Wqas, Hasham</p>
-            <span class="tag cyber-security">Cyber Security</span>
-          </div>
-          <h3>Cyber Security</h3>
-          <p>Cyber Security is a comprehensive course designed to equip you with ...</p>
-          <div class="price-rating cyber-security"><span class="price">RS:10,000</span><span class="old-price">RS:17,000</span><div class="stars">⭐⭐⭐⭐ 4.5</div></div>
-        </div>
-      </div>
-
-      <!-- Course Card 8 -->
-      <div class="course-card" onclick="window.open('https://www.google.com', '_blank')" data-location="Bahawalpur">
-        <img src="/assets/course-img/mechine.jpg" alt="Course Image">
-        <div class="course-info">
-          <div class="instructor">
-            <p>Sir Wqas</p>
-            <span class="tag machine-learning">Machine Learning</span>
-          </div>
-          <h3>Machine Learning</h3>
-          <p>Machine Learning is a comprehensive course designed to equip you with essential...</p>
-          <div class="price-rating machine-learning"><span class="price">RS:10,000</span><span class="old-price">RS:17,000</span><div class="stars">⭐⭐⭐⭐⭐ 4.9</div></div>
-        </div>
-      </div>
-
-      <!-- Course Card 9 -->
-      <div class="course-card" onclick="window.open('https://www.google.com', '_blank')" data-location="Bahawalpur">
-        <img src="/assets/course-img/graphic.jpg" alt="Course Image">
-        <div class="course-info">
-          <div class="instructor">
-            <p>Sir Wqas</p>
-            <span class="tag ux-ui-designing">UX/UI Designing</span>
-          </div>
-          <h3>UX/UI Designing</h3>
-          <p>Learn UX/UI designing.</p>
-          <div class="price-rating ux-ui-designing"><span class="price">RS:5,000</span><span class="old-price">RS:7,000</span><div class="stars">⭐⭐⭐⭐⭐ 4.9</div></div>
-        </div>
-      </div>
-
-      <!-- Course Card 10 -->
-      <div class="course-card" onclick="window.open('https://www.google.com', '_blank')" data-location="Bahawalpur">
-        <img src="/assets/course-img/video edit.jpg" alt="Course Image">
-        <div class="course-info">
-          <div class="instructor">
-            <p>Sir Wqas</p>
-            <span class="tag youtuber-course">Youtuber Course</span>
-          </div>
-          <h3>Youtuber Course</h3>
-          <p>Learn to become a successful YouTuber.</p>
-          <div class="price-rating youtuber-course"><span class="price">RS:9,000</span><span class="old-price">RS:11,000</span><div class="stars">⭐⭐⭐⭐⭐ 4.9</div></div>
-        </div>
-      </div>
-
-      <!-- Course Card 11 -->
-      <div class="course-card" onclick="window.open('https://www.google.com', '_blank')" data-location="Bahawalpur">
-        <img src="/assets/course-img/graphic.jpg" alt="Course Image">
-        <div class="course-info">
-          <div class="instructor">
-            <p>Sir Wqas</p>
-            <span class="tag graphic-designer">Graphic Designer</span>
-          </div>
-          <h3>Graphic Designer</h3>
-          <p>Learn graphic design.</p>
-          <div class="price-rating video-editing"><span class="price">RS:8,000</span><span class="old-price">RS:10,000</span><div class="stars">⭐⭐⭐⭐⭐ 4.9</div></div>
-        </div>
-      </div>
-
-      <!-- Course Card 12 -->
-      <div class="course-card" onclick="window.open('https://www.google.com', '_blank')" data-location="Islamabad">
-        <img src="/assets/course-img/arch3D.jpg" alt="Course Image">
-        <div class="course-info">
-          <div class="instructor">
-            <p>Sir Ahsan Abbas</p>
-            <span class="tag home-architecture">Home Architecture</span>
-          </div>
-          <h3>Home Architecture</h3>
-          <p>Learn home architecture.</p>
-          <div class="price-rating home-architecture"><span class="price">RS:6,000</span><span class="old-price">RS:8,000</span><div class="stars">⭐⭐⭐⭐⭐ 4.9</div></div>
-        </div>
-      </div>
-
-      <!-- Course Card 13 -->
-      <div class="course-card" onclick="window.open('https://www.google.com', '_blank')" data-location="Islamabad, Bahawalpur">
-        <img src="/assets/course-img/iot.jpg" alt="Course Image">
-        <div class="course-info">
-          <div class="instructor">
-            <p>Sir Salman</p>
-            <span class="tag iot">IOT</span>
-          </div>
-          <h3>Internet of Thing</h3>
-          <p>Internet of Things (IoT) is a comprehensive course designed...</p>
-          <div class="price-rating iot"><span class="price">RS:10,000</span><span class="old-price">RS:15,000</span><div class="stars">⭐⭐⭐⭐⭐ 4.9</div></div>
-        </div>
-      </div>
-
-      <!-- Course Card 14 -->
-      <div class="course-card" onclick="window.open('https://www.google.com', '_blank')" data-location="Islamabad, Bahawalpur">
-        <img src="/assets/course-img/digital markt.jpg" alt="Course Image">
-        <div class="course-info">
-          <div class="instructor">
-            <p>Sir Hasham</p>
-            <span class="tag digital-marketing">Marketing</span>
-          </div>
-          <h3>Digital Marketing, Ads</h3>
-          <p>Digital Marketing is a comprehensive course designed to equip you with essential...</p>
-          <div class="price-rating digital-marketing"><span class="price">RS:9,000</span><span class="old-price">RS:14,000</span><div class="stars">⭐⭐⭐⭐ 4.0</div></div>
-        </div>
-      </div>
-
-      <!-- Course Card 15 -->
-      <div class="course-card" onclick="window.open('https://www.google.com', '_blank')" data-location="Islamabad, Bahawalpur">
-        <img src="/assets/course-img/webdevelop.jpg" alt="Course Image">
-        <div class="course-info">
-          <div class="instructor">
-            <p>Sir Salman</p>
-            <span class="tag web-app-sw-development">Development</span>
-          </div>
-          <h3>Web, App, SW Development</h3>
-          <p>Learn web, app, and software development.</p>
-          <div class="price-rating graphic-designer"><span class="price">RS:8,000</span><span class="old-price">RS:10,000</span><div class="stars">⭐⭐⭐⭐⭐ 4.9</div></div>
-        </div>
-      </div>
-
-      <!-- Course Card 16 -->
-      <div class="course-card" onclick="window.open('https://www.google.com', '_blank')" data-location="Islamabad, Bahawalpur">
-        <img src="/assets/course-img/web without code.jpg" alt="Course Image">
-        <div class="course-info">
-          <div class="instructor">
-            <p>Sir Salman</p>
-            <span class="tag finance">NO code</span>
-          </div>
-          <h3>App Dev Without Coding</h3>
-          <p>Learn app development without coding.</p>
-          <div class="price-rating app-dev-without-coding"><span class="price">RS:12,000</span><span class="old-price">RS:15,000</span><div class="stars">⭐⭐⭐⭐⭐ 4.8</div></div>
-        </div>
-      </div>
-
-      <!-- Course Card 17 -->
-      <div class="course-card" onclick="window.open('https://www.google.com', '_blank')" data-location="Islamabad, Bahawalpur">
-        <img src="/assets/course-img/web without code.jpg" alt="Course Image">
-        <div class="course-info">
-          <div class="instructor">
-            <p>Sir Salman</p>
-            <span class="tag finance">NO code</span>
-          </div>
-          <h3>Web Dev Without Coding</h3>
-          <p>No-code web development lets you build websites using visual tools instead of programming.</p>
-          <div class="price-rating web-dev-without-coding"><span class="price">RS:10,000</span><span class="old-price">RS:13,000</span><div class="stars">⭐⭐⭐⭐⭐ 4.9</div></div>
-        </div>
-      </div>
-
-      <!-- Course Card 18 -->
-      <div class="course-card" onclick="window.open('https://www.google.com', '_blank')" data-location="Bahawalpur">
-        <img src="/assets/course-img/graphic.jpg" alt="Course Image">
-        <div class="course-info">
-          <div class="instructor">
-            <p>Soon</p>
-            <span class="tag trading">Trading</span>
-          </div>
-          <h3>Trading</h3>
-          <p>Trading course coming soon.</p>
-          <div class="price-rating trading"><span class="price">Coming Soon</span><div class="stars">Coming Soon</div></div>
-        </div>
-      </div>
-
-      <!-- Course Card 19 -->
-      <div class="course-card" onclick="window.open('https://www.google.com', '_blank')" data-location="Bahawalpur">
-        <img src="/assets/course-img/graphic.jpg" alt="Course Image">
-        <div class="course-info">
-          <div class="instructor">
-            <p>Soon</p>
-            <span class="tag truck-dispatching">Truck Dispatching</span>
-          </div>
-          <h3>Truck Dispatching</h3>
-          <p>Truck dispatching course coming soon.</p>
-          <div class="price-rating truck-dispatching"><span class="price">Coming Soon</span><div class="stars">Coming Soon</div></div>
-        </div>
-      </div>
-
+  <div class="card">
+    <!-- Header Section -->
+    <div class="header">
+      <img src="https://res.cloudinary.com/adeeb-tech-lab/image/upload/v1755666790/salman_adeeb_bj627h.webp" alt="Profile Picture" class="profile-pic">
     </div>
-  </section>
- 
-<script>
-function filterCourses(location) {
-  const cards = document.querySelectorAll('.course-card');
-  cards.forEach(card => {
-    const locations = card.getAttribute('data-location').split(',').map(loc => loc.trim());
-    if (locations.includes(location)) {
-      card.style.display = 'block';
-    } else {
-      card.style.display = 'none';
-    }
-  });
-}
-</script>
+
+    <!-- Content Section -->
+    <div class="content">
+      <h2>Salman Adeeb</h2>
+      <h4>SEO</h4>
+      <p><b>Adeeb Technology Lab</b></p>
+      <p>CEO of Adeeb Technology Lab | Graphic Designer | Video Editor | Developer | Cyber Security Expert with 8+ years of experience. Worked with IUB, AndroidBull, RahamTV & more. Explore my portfolio or join my tech community on WhatsApp!</p>
+
+      <!-- Skills -->
+      <div class="skills">
+        <span>Graphic Designing</span>
+        <span>Video Editing</span>
+        <span>Microsoft Office</span>
+        <span>Photo Retouching</span>
+        <span>Animation</span>
+        <span>Architecture</span>
+        <span>Desktop Publisher</span>
+        <span>Social Media Manager</span>
+        <span>Developer</span>
+      </div>
+
+      <!-- Buttons -->
+      <div class="buttons">
+        <a href="https://drive.google.com/uc?export=download&id=1f1yVQu8J5v0dHRhDAmJmBDRqWCC5RP1A" class="btn cv-btn"><i class="fa-solid fa-download"></i> Download CV</a>
+        <a href="https://wa.me/923092333121" target="_blank" class="btn whatsapp-btn"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+      </div>
+
+      <!-- Contact -->
+      <div class="contact">
+        <a href="mailto:AdeebTechnologyLab@gmail.com"><i class="fa-solid fa-envelope"></i> AdeebTechnologyLab@gmail.com</a>
+        <a href="tel:+923092333121"><i class="fa-solid fa-phone"></i> +92 309 2333121</a>
+<a href="https://www.instagram.com/salmanadeeb2/" target="_blank">
+  <i class="fa-brands fa-instagram"></i> Instagram
+</a>
+
+<a href="https://www.linkedin.com/in/salmanadeeb/" target="_blank">
+  <i class="fa-brands fa-linkedin"></i> LinkedIn
+</a>
+
+<a href="https://www.facebook.com/salmanadeeb2" target="_blank">
+  <i class="fa-brands fa-facebook"></i> Facebook
+</a>
+
+<a href="https://www.youtube.com/c/AdeebTechnologyLab" target="_blank">
+  <i class="fa-brands fa-youtube"></i> YouTube
+</a>
+
+<a href="https://x.com/SalmanAdeeb02" target="_blank">
+  <i class="fa-brands fa-twitter"></i> Twitter
+</a>
+        <a href="https://tiktok.com/SalmanAdeeb02" target="_blank">
+  <i class="fa-brands fa-tiktok"></i> TikTok
+</a>
+
+<a href="https://www.adeebtechlab.com/" target="_blank">
+  <i class="fa-solid fa-globe"></i> Website
+</a>
+
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      Adeeb Tech Lab • Digital Tech Expert © Salman Adeeb
+    </div>
+  </div>
 
 </body>
 </html>
+
+
+
+
+
+
+
 
 
