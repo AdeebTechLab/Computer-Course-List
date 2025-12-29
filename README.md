@@ -1,10 +1,5 @@
 # 📚 **Computer-Course-List**
 
-**Repository:** AdeebTechLab/Computer-Course-List
-**GitHub:** [https://github.com/AdeebTechLab/Computer-Course-List](https://github.com/AdeebTechLab/Computer-Course-List)
-**Stars:** ⭐ 1
-**License:** MIT 
-
 ## 🧠 **Project Overview**
 
 This repository appears to be a simple **static HTML/CSS site** listing **computer courses**, likely relevant to the *Bahawalpur Computer Courses* initiative by Adeeb Technology Lab. It’s intended to show course information in a frontend webpage. 
@@ -33,16 +28,6 @@ This site functions as a **course catalog**—presumably for computing and IT-re
 * 🎨 **Styling with CSS** for layout and visuals.
 * 📄 **Static web presentation** hosted via GitHub or a page deployment (e.g., Vercel link seen in the repo). 
 
-## 📁 **Usage**
-
-To view the course list locally:
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/AdeebTechLab/Computer-Course-List.git
-   ```
-2. Open the `index.html` file in a browser.
 
 ## 🧾 **License**
 
