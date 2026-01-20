@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Computer Courses</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#f8faff;
+  color:#333;
+  overflow-x:hidden;
+}
+
+/* ================= NAVBAR ================= */
+.navbar{
+  height:65px;
+  width:90%;
+  margin:20px auto;
+  background:#fff;
+  border-radius:30px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0 40px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.1);
+}
+
+.logo{
+  font-size:22px;
+  font-weight:600;
+  color:#1C2A45;
+}
+
+/* ================= COURSES ================= */
+.courses-section{
+  padding:70px 8%;
+  text-align:center;
+}
+
+.section-title{
+  font-size:2.4rem;
+  color:#1C2A45;
+  margin-bottom:40px;
+}
+
+.courses-container{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:25px;
+}
+
+/* ===== COURSE CARD ===== */
+.course-card{
+  background:#fff;
+  border-radius:18px;
+  overflow:hidden;
+  position:relative;
+  cursor:pointer;
+  box-shadow:0 5px 20px rgba(0,0,0,0.08);
+  transform-style:preserve-3d;
+  transition:all 0.5s ease;
+  opacity:0;
+  transform:translateY(60px) scale(0.95);
+}
+
+.course-card.show{
+  opacity:1;
+  transform:translateY(0) scale(1);
+}
+
+.course-card:hover{
+  transform:rotateX(6deg) rotateY(-6deg) translateY(-15px);
+  box-shadow:0 30px 50px rgba(0,0,0,0.25);
+}
+
+.course-card img{
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  transition:0.6s ease;
+}
+
+.course-card:hover img{
+  transform:scale(1.1);
+}
+
+.course-info{
+  padding:20px;
+  text-align:left;
+}
+
+.course-info h3{
+  font-size:1.05rem;
+  margin-bottom:8px;
+  color:#1C2A45;
+}
+
+.course-info p{
+  font-size:0.85rem;
+  color:#666;
+  margin-bottom:10px;
+}
+
+/* ===== FEE CIRCLE ===== */
+.fee-circle{
+  position:absolute;
+  top:15px;
+  right:15px;
+  width:80px;
+  height:80px;
+  background:linear-gradient(135deg,#1dd1a1,#00b894);
+  color:#fff;
+  border-radius:50%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  font-weight:600;
+  font-size:14px;
+  box-shadow:0 8px 20px rgba(0,184,148,0.4);
+  animation:pulse 2s infinite;
+  text-align:center;
+  line-height:1.1;
+}
+
+.fee-circle .off-label{
+  font-size:10px;      /* old fee ke size ke barabar */
+  font-weight:700;
+  color:#ffe600;       /* yellow color for OFF */
+  margin-bottom:2px;
+}
+
+.fee-circle .old-fee{
+  font-size:10px;
+  text-decoration: line-through;
+  color:rgba(255,255,255,0.7);
+  margin-top:2px;
+}
+
+@keyframes pulse{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.08)}
+  100%{transform:scale(1)}
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:1200px){
+  .courses-container{grid-template-columns:repeat(3,1fr);}
+}
+@media(max-width:900px){
+  .courses-container{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:600px){
+  .courses-container{grid-template-columns:1fr;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+  <div class="logo">BWP Computer Courses</div>
+</div>
+
+<section class="courses-section">
+<h1 class="section-title">Our Popular Computer Courses</h1>
+
+<div class="courses-container">
+
+<!-- CARD 1 -->
+<div class="course-card">
+  <div class="fee-circle">
+    <span class="off-label">70% OFF</span>
+    Rs 5,000
+    <span class="old-fee">Rs 7,000</span>
+  </div>
+  <img src="assets/office.jpg" alt="Office Work">
+  <div class="course-info">
+    <h3>Office Work [IT]</h3>
+    <p>DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</p>
+  </div>
+</div>
+
+<!-- CARD 2 -->
+<div class="course-card">
+  <div class="fee-circle">
+    <span class="off-label">55% OFF</span>
+    Rs 4,000
+    <span class="old-fee">Rs 10,000</span>
+  </div>
+  <img src="assets/freelancing.jpg" alt="Graphic Designing">
+  <div class="course-info">
+    <h3>Freelancing</h3>
+    <p>DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</p>
+  </div>
+</div>
+
+<!-- CARD 3 -->
+<div class="course-card">
+  <div class="fee-circle">
+    <span class="off-label">70% OFF</span>
+    Rs 4,500
+    <span class="old-fee">Rs 7,000</span>
+  </div>
+  <img src="assets/digital_markt.jpg" alt="Web Development">
+  <div class="course-info">
+    <h3>Digital Marketing, Ads</h3>
+    <p>DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</p>
+  </div>
+</div>
+
+
+
+
+<!-- CARD 3 -->
+<div class="course-card">
+  <div class="fee-circle">
+    <span class="off-label">70% OFF</span>
+    Rs 4,000
+    <span class="old-fee">Rs 6,000</span>
+  </div>
+  <img src="assets/video_edit.jpg" alt="Web Development">
+  <div class="course-info">
+    <h3>Video Editing </h3>
+    <p>DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</p>
+  </div>
+</div>
+
+
+<!-- CARD 3 -->
+<div class="course-card">
+  <div class="fee-circle">
+    <span class="off-label">70% OFF</span>
+    Rs 4,500
+    <span class="old-fee">Rs 8,000</span>
+  </div>
+  <img src="assets/graphic.jpg" alt="Web Development">
+  <div class="course-info">
+    <h3>Graphic Designer</h3>
+    <p>DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</p>
+  </div>
+</div>
+
+
+<!-- CARD 3 -->
+<div class="course-card">
+  <div class="fee-circle">
+    <span class="off-label">70% OFF</span>
+    Rs 7,500
+    <span class="old-fee">Rs 12,000</span>
+  </div>
+  <img src="assets/e-commerx.jpg" alt="Web Development">
+  <div class="course-info">
+    <h3>E-Commerce</h3>
+    <p>DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</p>
+  </div>
+</div>
+
+
+
+<!-- CARD 3 -->
+<div class="course-card">
+  <div class="fee-circle">
+    <span class="off-label">70% OFF</span>
+    Rs 5,000
+    <span class="old-fee">Rs 7,500</span>
+  </div>
+  <img src="assets/" alt="Web Development">
+  <div class="course-info">
+    <h3>UX/UI Designing</h3>
+    <p>DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</p>
+  </div>
+</div>
+
+
+<!-- CARD 3 -->
+<div class="course-card">
+  <div class="fee-circle">
+    <span class="off-label">70% OFF</span>
+    Rs 4,500
+    <span class="old-fee">Rs 12,500</span>
+  </div>
+  <img src="assets/" alt="Web Development">
+  <div class="course-info">
+    <h3>Youtuber Course</h3>
+    <p>DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</p>
+  </div>
+</div>
+
+
+
+<!-- CARD 3 -->
+<div class="course-card">
+  <div class="fee-circle">
+    <span class="off-label">70% OFF</span>
+    Rs 5,000
+    <span class="old-fee">Rs 9,500</span>
+  </div>
+  <img src="assets/Architecture.jpg" alt="Web Development">
+  <div class="course-info">
+    <h3>Home Architecture</h3>
+    <p>DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</p>
+  </div>
+</div>
+
+
+<!-- CARD 3 -->
+<div class="course-card">
+  <div class="fee-circle">
+    <span class="off-label">70% OFF</span>
+    Rs 6,000
+    <span class="old-fee">Rs 8,000</span>
+  </div>
+  <img src="assets/webdevelop.jpg" alt="Web Development">
+  <div class="course-info">
+    <h3>Web Development</h3>
+    <p>DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</p>
+  </div>
+</div>
+
+
+<!-- CARD 3 -->
+<div class="course-card">
+  <div class="fee-circle">
+    <span class="off-label">70% OFF</span>
+    Rs 6,000
+    <span class="old-fee">Rs 8,000</span>
+  </div>
+  <img src="assets/" alt="Web Development">
+  <div class="course-info">
+    <h3>App Development</h3>
+    <p>DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</p>
+  </div>
+</div>
+
+
+<!-- CARD 3 -->
+<div class="course-card">
+  <div class="fee-circle">
+    <span class="off-label">70% OFF</span>
+    Rs 5,000
+    <span class="old-fee">Rs 15,000</span>
+  </div>
+  <img src="assets/" alt="Web Development">
+  <div class="course-info">
+    <h3>App Dev Without Coding</h3>
+    <p>DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</p>
+  </div>
+</div>
+
+
+<!-- CARD 3 -->
+<div class="course-card">
+  <div class="fee-circle">
+    <span class="off-label">70% OFF</span>
+    Rs 5,000
+    <span class="old-fee">Rs 15,000</span>
+  </div>
+  <img src="assets/" alt="Web Development">
+  <div class="course-info">
+    <h3>Web Dev Without Coding</h3>
+    <p>DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</p>
+  </div>
+</div>
+
+
+<!-- CARD 3 -->
+<div class="course-card">
+  <div class="fee-circle">
+    <span class="off-label">70% OFF</span>
+    Rs 8,000
+    <span class="old-fee">Rs 16,000</span>
+  </div>
+  <img src="assets/" alt="Web Development">
+  <div class="course-info">
+    <h3>Cyber Security</h3>
+    <p>DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</p>
+  </div>
+</div>
+
+
+<!-- CARD 3 -->
+<div class="course-card">
+  <div class="fee-circle">
+    <span class="off-label">70% OFF</span>
+    Rs 7,000
+    <span class="old-fee">Rs 12,000</span>
+  </div>
+  <img src="assets/mechine.jpg" alt="Web Development">
+  <div class="course-info">
+    <h3>Machine learning</h3>
+    <p>DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</p>
+  </div>
+</div>
+
+
+<!-- CARD 3 -->
+<div class="course-card">
+  <div class="fee-circle">
+    <span class="off-label">70% OFF</span>
+    Rs 8,000
+    <span class="old-fee">Rs 13,500</span>
+  </div>
+  <img src="assets/iot.jpg" alt="Web Development">
+  <div class="course-info">
+    <h3>Internet of Thing [IOT]</h3>
+    <p>DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</p>
+  </div>
+</div>
+
+
+<!-- CARD 3 -->
+<div class="course-card">
+  <div class="fee-circle">
+    <span class="off-label">70% OFF</span>
+    Rs 4,500
+    <span class="old-fee">Rs 6,000</span>
+  </div>
+  <img src="assets/" alt="Web Development">
+  <div class="course-info">
+    <h3>Programming</h3>
+    <p>DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</p>
+  </div>
+</div>
+
+
+
+<!-- CARD 3 -->
+<div class="course-card">
+  <div class="fee-circle">
+    <span class="off-label">70% OFF</span>
+    Rs 8,000
+    <span class="old-fee">Rs 16,000</span>
+  </div>
+  <img src="assets/texation.jpg" alt="Web Development">
+  <div class="course-info">
+    <h3>Taxation</h3>
+    <p>DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</p>
+  </div>
+</div>
+
+
+<!-- CARD 3 -->
+<div class="course-card">
+  <div class="fee-circle">
+    <span class="off-label">Soon% OFF</span>
+    Rs Soon
+    <span class="old-fee">Rs Soon</span>
+  </div>
+  <img src="assets/" alt="Web Development">
+  <div class="course-info">
+    <h3>Trading</h3>
+    <p>DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</p>
+  </div>
+</div>
+
+
+<!-- CARD 3 -->
+<div class="course-card">
+  <div class="fee-circle">
+    <span class="off-label">Soon% OFF</span>
+    Rs Soon
+    <span class="old-fee">Rs Soon</span>
+  </div>
+  <img src="assets/" alt="Web Development">
+  <div class="course-info">
+    <h3>Truck Dispatching</h3>
+    <p>DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</p>
+  </div>
+</div>
+
+
+<!-- CARD 3 -->
+<div class="course-card">
+  <div class="fee-circle">
+    <span class="off-label">Soon% OFF</span>
+    Rs Soon
+    <span class="old-fee">Rs Soon</span>
+  </div>
+  <img src="assets/" alt="Web Development">
+  <div class="course-info">
+    <h3>Software Development</h3>
+    <p>DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</p>
+  </div>
+</div>
+
+
+
+</div>
+</section>
+
+<script>
+const cards = document.querySelectorAll('.course-card');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+},{ threshold: 0.2 });
+
+cards.forEach(card => {
+  observer.observe(card);
+
+  // CLICK EVENT – OPEN REGISTRATION FORM
+  card.addEventListener('click', () => {
+    window.open("https://computer-course-registration-form.vercel.app/", "_blank");
+  });
+});
+</script>
+
+</body>
+</html>
